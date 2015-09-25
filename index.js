@@ -1,6 +1,7 @@
 var http = require("http");
 var url = require('url');
 var fs = require('fs');
+var io = require('socket.io'); // 加入 Socket.IO
 
 var server = http.createServer(function(request, response) {
   console.log('Connection');
@@ -33,3 +34,5 @@ var server = http.createServer(function(request, response) {
 });
 
 server.listen(8001);
+
+io.listen(server); // 開啟 Socket.IO 的 listener
