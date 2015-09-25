@@ -1,0 +1,25 @@
+{
+  "name": "nodejs_socketio",
+  "version": "0.0.1",
+  "description": "Use SocketIO to implement live chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinlincg/nodejs_socketio.git"
+  },
+  "keywords": [
+    "socketio"
+  ],
+  "author": "KevinLin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinlincg/nodejs_socketio/issues"
+  },
+  "homepage": "https://github.com/kevinlincg/nodejs_socketio#readme",
+  "dependencies": {
+    "socket.io": "^1.3.7"
+  }
+}
