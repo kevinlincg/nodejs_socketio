@@ -38,5 +38,8 @@ server.listen(8001);
 var serv_io = io.listen(server); // 開啟 Socket.IO 的 listener
 
 serv_io.sockets.on('connection', function(socket) {
-    socket.emit('message', {'message': 'hello world'});
+    // 傳送時間訊息給瀏覽器
+    setInterval(function() {
+      socket.emit('date', {'date': new Date()});
+    }, 1000);
 });
