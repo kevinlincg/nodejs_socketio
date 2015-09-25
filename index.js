@@ -35,4 +35,8 @@ var server = http.createServer(function(request, response) {
 
 server.listen(8001);
 
-io.listen(server); // 開啟 Socket.IO 的 listener
+var serv_io = io.listen(server); // 開啟 Socket.IO 的 listener
+
+serv_io.sockets.on('connection', function(socket) {
+    socket.emit('message', {'message': 'hello world'});
+});
