@@ -42,4 +42,9 @@ serv_io.sockets.on('connection', function(socket) {
     setInterval(function() {
       socket.emit('date', {'date': new Date()});
     }, 1000);
+
+    // 接收來自於瀏覽器的資料
+    socket.on('client_data', function(data) {
+      process.stdout.write(data.letter);
+    });
 });
